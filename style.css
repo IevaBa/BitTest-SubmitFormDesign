@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 * {
   margin: 0rem;
   padding: 0;
@@ -14,7 +15,7 @@ body {
   height: 100vh;
   position: relative;
   font-size: 1.8rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 body:before {
   content: "";
@@ -32,7 +33,6 @@ body:before {
   width: 80vw;
   height: 80vh;
   position: relative;
-  color: #2637c0;
   gap: 2rem;
   padding: 2rem 6rem;
   align-items: center;
@@ -52,8 +52,16 @@ body:before {
   grid-column: 1 / span2;
 }
 h1 {
-  font-weight: lighter;
   margin-top: 2rem;
+  color: #2637c0;
+}
+input {
+  border: none;
+}
+::placeholder {
+  color: #2637c0;
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .name,
 .email,
@@ -91,7 +99,10 @@ h1 {
   padding: 2rem 5rem;
   width: 15rem;
   justify-self: center;
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .submit_message {
   color: #7cdfd0;
+  font-weight: bolder;
 }
