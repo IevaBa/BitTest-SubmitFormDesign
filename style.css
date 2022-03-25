@@ -6,9 +6,9 @@
 html {
   font-size: 62.5%;
 }
-.body {
-  display: flex;
-  flex-direction: column;
+body {
+  display: grid;
+  grid-template-columns: auto;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -16,13 +16,10 @@ html {
   font-size: 1.8rem;
   font-family: Arial, Helvetica, sans-serif;
 }
-.body:before {
+body:before {
   content: "";
   background: #d4e6fe;
   position: absolute;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom;
   top: 0;
   left: 0;
   bottom: 0;
@@ -30,56 +27,39 @@ html {
   z-index: -1;
 }
 .main {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  height: 80%;
-  max-height: 80%;
+  display: grid;
+  grid-template-columns: auto;
+  width: 80vw;
+  height: 80vh;
   position: relative;
   color: #2637c0;
+  gap: 2rem;
+  padding: 2rem 6rem;
+  align-items: center;
+  overflow: scroll;
 }
 .main:before {
   content: "";
   background: #fdfeff;
   position: absolute;
-  background-size: cover;
-  background-position: center;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   z-index: -1;
 }
+.header {
+  grid-column: 1 / span2;
+}
 h1 {
   font-weight: lighter;
-  text-indent: 7rem;
   margin-top: 2rem;
-}
-.content {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 2fr;
-  row-gap: 1rem;
-  margin-top: 2rem;
-  padding: 2rem 10rem;
-  max-width: 80%;
-}
-.row1,
-.row2 {
-  display: grid;
-  grid-template-columns: auto auto;
-  column-gap: 1rem;
-  align-items: center;
-}
-.row3,
-.row4 {
-  display: grid;
 }
 .name,
 .email,
 .phone {
-  width: 30rem;
   border-radius: 1rem;
-  padding: 2rem 10rem 2rem 2rem;
+  padding: 2rem;
 }
 .name {
   background-color: #e7e9fe;
@@ -90,29 +70,27 @@ h1 {
 }
 .address,
 .message {
-  padding: 2rem 10rem 2rem 2rem;
   border-radius: 1rem;
-  width: 60rem;
+  grid-column: 1 / span2;
+  padding: 2rem;
 }
 .address {
-  display: grid;
   background-color: #c7cdfd;
 }
 .message {
   background-color: #a5b1fd;
-  padding-bottom: 5rem;
-  margin-bottom: 1rem;
+  padding-bottom: 6rem;
 }
 .submit {
-  display: block;
   background-color: #233bf5;
   color: #dbecff;
-  width: 20rem;
   justify-content: center;
-  padding: 2rem 8rem;
   border-radius: 3rem;
-  margin-top: 1rem;
-  margin: 0 auto;
+  grid-column: 1 / span2;
+  text-align: center;
+  padding: 2rem 5rem;
+  width: 15rem;
+  justify-self: center;
 }
 .submit_message {
   color: #7cdfd0;
