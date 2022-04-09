@@ -31,12 +31,12 @@ body:before {
   display: grid;
   grid-template-columns: auto;
   width: 80vw;
-  height: 80vh;
+  min-height: 80vh;
   position: relative;
   gap: 2rem;
   padding: 2rem 6rem;
   align-items: center;
-  overflow: scroll;
+  /* overflow:scroll formose nenaudoti, su min, max height reguliuoti */
 }
 .main:before {
   content: "";
@@ -55,7 +55,8 @@ h1 {
   margin-top: 2rem;
   color: #2637c0;
 }
-input {
+input,
+textarea {
   border: none;
 }
 ::placeholder {
